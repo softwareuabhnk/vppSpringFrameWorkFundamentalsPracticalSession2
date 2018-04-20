@@ -10,6 +10,14 @@
 				
 	<bean id="servicesDiary"
 				class="com.virtualpairprogrammers.services.diary.DiaryManagementServiceMockImpl">
+	</bean>
+	
+	<bean id="servicesCalls"
+				class="com.virtualpairprogrammers.services.calls.CallHandlingServiceImpl">
+	
+	    <constructor-arg index="0" ref="servicesCustomer"/>
+		<constructor-arg index="1" ref="servicesDiary"/>	   	  
+		
 	</bean>	
 
 </beans>
